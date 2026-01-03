@@ -1,0 +1,94 @@
+{
+  "segregationOfDuties": [
+    {
+      "id": 1,
+      "worker": "Alex Garcia (On Leave)",
+      "position": "P-00778 Vice President, Human Resources (On Leave)",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "Payroll Settlement Specialist; Payroll Partner; Payroll Administrator",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": ""
+    },
+    {
+      "id": 2,
+      "worker": "Archer Graham",
+      "position": "P-00742 Controller",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": "Cash Manager; Accountant; Accounts Payable Analyst; Accounts Payable Data Entry Specialist; Accounts Payable Settlement Specialist; Business Asset Accountant"
+    },
+    {
+      "id": 3,
+      "worker": "Astrid Berglund",
+      "position": "P-00651 Regional Finance Manager",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": "Accountant; Accounts Payable Data Entry Specialist; Requisition Requester"
+    },
+    {
+      "id": 4,
+      "worker": "Ayush Sharma",
+      "position": "P-00003 Controller",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": "Cash Manager; Accountant; Accounts Payable Analyst; Accounts Payable Data Entry Specialist; Accounts Payable Settlement Specialist; Business Asset Accountant"
+    },
+    {
+      "id": 5,
+      "worker": "John Smith",
+      "position": "P-00125 Senior Accountant",
+      "securityGroupsExpensesException": "Expense Report Approver",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "Customer Invoice Processor",
+      "securityGroupsSupplierException": ""
+    },
+    {
+      "id": 6,
+      "worker": "Maria Chen",
+      "position": "P-00234 Payroll Manager",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "Payroll Processor; Payroll Approver; Compensation Administrator",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": ""
+    },
+    {
+      "id": 7,
+      "worker": "Robert Johnson",
+      "position": "P-00456 AP Supervisor",
+      "securityGroupsExpensesException": "Expense Approver",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": "Accounts Payable Manager; Vendor Payment Approver; Purchase Order Approver"
+    },
+    {
+      "id": 8,
+      "worker": "Sarah Williams",
+      "position": "P-00789 HR Business Partner",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "Compensation Analyst; Benefits Administrator",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": ""
+    },
+    {
+      "id": 9,
+      "worker": "David Martinez",
+      "position": "P-00321 Finance Director",
+      "securityGroupsExpensesException": "Expense Report Reviewer; Budget Approver",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "Credit Review Manager",
+      "securityGroupsSupplierException": "Vendor Management Lead"
+    },
+    {
+      "id": 10,
+      "worker": "Emily Taylor",
+      "position": "P-00567 Procurement Manager",
+      "securityGroupsExpensesException": "",
+      "securityGroupsPayrollException": "",
+      "securityGroupsCustomerException": "",
+      "securityGroupsSupplierException": "Purchase Requisition Approver; Vendor Contract Manager; Supplier Onboarding Specialist"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "securityGroups": [
+    {
+      "id": 1,
+      "securityGroup": "HR Partner (By Location) - Excluding HR Administrator",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 8,
+      "members": "lfreidman / Leigh Freidman; cjones / Caitlin Jones; jqin / Jia Qin  (秦甲) : ckunz / Constantin Kunz; fendo / Fumi Endo（遠藤ふみ）: jboyer / Julie Boyer; hbenoit / Hélène Benoit; nmatsuda / Nobu Matsuda (松田 悟)",
+      "lastFunctionallyUpdated": "12/11/2023 12:03:41 AM"
+    },
+    {
+      "id": 2,
+      "securityGroup": "Company Financial Analyst (Excluding CXO)",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 10,
+      "members": "gtisserand / Gregoire Tisserand; npierce / Noah Pierce; lbos / Lieke Bos; agraham / Archer Graham; jlee / Jake Lee; csung / Chao Sung（宋超）: gcarlisle / Gwen Carlisle; oreynolds / Oliver Reynolds; lmcneil@i8 / Logan McNeil; asharma / Ayush Sharma",
+      "lastFunctionallyUpdated": "3/27/2025 8:06:07 AM"
+    },
+    {
+      "id": 3,
+      "securityGroup": "Acquisition Analyst",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 23,
+      "members": "schandra-i8cloud / Sharat Chandra M; test-sc / Test Interview; y / yash; hzaman-i8cloud / Hasib Zaman; lntini.customer / Logan Ntini; nmajid-i8cloud / Nabeel Majid; wd-configurator / Workday Configurator; jlee / Jake Lee; wd-implementer / Workday Implementer; craj@i8cloudconsulting.com / Chhitiz Arun Raj; jbanks / Joy Banks; wd-support / Workday Support; lmcneil2 / logan mcneil mcneil; agarcia / Alex Garcia; ssrivastava-i8cloud / Sankalp Srivastava",
+      "lastFunctionallyUpdated": "4/23/2025 3:54:28 AM"
+    },
+    {
+      "id": 4,
+      "securityGroup": "Payroll Partner",
+      "securityGroupType": "Role Based Security Group",
+      "sumOfMembershipCount": 5,
+      "members": "jsmith / John Smith; agarcia / Alex Garcia; mchen / Maria Chen; rjohnson / Robert Johnson; swilliams / Sarah Williams",
+      "lastFunctionallyUpdated": "2/15/2024 10:22:15 AM"
+    },
+    {
+      "id": 5,
+      "securityGroup": "Finance Team Access",
+      "securityGroupType": "User Based Security Group",
+      "sumOfMembershipCount": 12,
+      "members": "finance.admin@i8cloud.com; finance.analyst@i8cloud.com; finance.manager@i8cloud.com; accounting.lead@i8cloud.com; budget.controller@i8cloud.com; tax.specialist@i8cloud.com; audit.reviewer@i8cloud.com; compliance.officer@i8cloud.com; treasury.manager@i8cloud.com; financial.planner@i8cloud.com; cost.analyst@i8cloud.com; revenue.manager@i8cloud.com",
+      "lastFunctionallyUpdated": "1/20/2024 3:15:30 PM"
+    },
+    {
+      "id": 6,
+      "securityGroup": "IT Security Admins",
+      "securityGroupType": "Role Based Security Group",
+      "sumOfMembershipCount": 7,
+      "members": "security.admin@i8cloud.com; it.admin@i8cloud.com; system.admin@i8cloud.com; network.admin@i8cloud.com; security.analyst@i8cloud.com; infosec.specialist@i8cloud.com; cyber.security@i8cloud.com",
+      "lastFunctionallyUpdated": "3/10/2024 9:45:22 AM"
+    },
+    {
+      "id": 7,
+      "securityGroup": "Regional Managers - North America",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 15,
+      "members": "na.manager1@i8cloud.com; na.manager2@i8cloud.com; na.manager3@i8cloud.com; na.manager4@i8cloud.com; na.manager5@i8cloud.com; us.regional@i8cloud.com; canada.regional@i8cloud.com; mexico.regional@i8cloud.com; operations.na@i8cloud.com; sales.na@i8cloud.com; hr.na@i8cloud.com; finance.na@i8cloud.com; it.na@i8cloud.com; compliance.na@i8cloud.com; admin.na@i8cloud.com",
+      "lastFunctionallyUpdated": "4/5/2024 2:30:18 PM"
+    },
+    {
+      "id": 8,
+      "securityGroup": "Procurement Approvers",
+      "securityGroupType": "Role Based Security Group",
+      "sumOfMembershipCount": 6,
+      "members": "procurement.manager@i8cloud.com; purchase.approver@i8cloud.com; vendor.manager@i8cloud.com; contract.admin@i8cloud.com; supply.chain@i8cloud.com; sourcing.specialist@i8cloud.com",
+      "lastFunctionallyUpdated": "2/28/2024 11:20:45 AM"
+    },
+    {
+      "id": 9,
+      "securityGroup": "Employee Self-Service",
+      "securityGroupType": "User Based Security Group",
+      "sumOfMembershipCount": 450,
+      "members": "All Active Employees",
+      "lastFunctionallyUpdated": "1/5/2024 8:00:00 AM"
+    },
+    {
+      "id": 10,
+      "securityGroup": "Benefits Administration",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 8,
+      "members": "benefits.admin@i8cloud.com; hr.benefits@i8cloud.com; compensation.specialist@i8cloud.com; enrollment.coordinator@i8cloud.com; benefits.analyst@i8cloud.com; wellness.coordinator@i8cloud.com; insurance.specialist@i8cloud.com; retirement.admin@i8cloud.com",
+      "lastFunctionallyUpdated": "3/15/2024 1:45:30 PM"
+    },
+    {
+      "id": 11,
+      "securityGroup": "Time Tracking Approvers",
+      "securityGroupType": "Role Based Security Group",
+      "sumOfMembershipCount": 25,
+      "members": "Managers and Supervisors across all departments",
+      "lastFunctionallyUpdated": "2/10/2024 10:15:22 AM"
+    },
+    {
+      "id": 12,
+      "securityGroup": "Compliance Reviewers",
+      "securityGroupType": "Aggregation Security Group",
+      "sumOfMembershipCount": 9,
+      "members": "compliance.officer@i8cloud.com; legal.counsel@i8cloud.com; audit.manager@i8cloud.com; risk.analyst@i8cloud.com; regulatory.specialist@i8cloud.com; internal.auditor@i8cloud.com; ethics.officer@i8cloud.com; data.protection@i8cloud.com; quality.assurance@i8cloud.com",
+      "lastFunctionallyUpdated": "4/1/2024 3:30:15 PM"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "businessProcessPolicies": [
+    {
+      "id": 1,
+      "businessProcessType": "Request Time Off",
+      "byUser": "lmcneil@i8 / Logan McNeil",
+      "lastChanged": "11/5/2025 8:56:31 PM"
+    },
+    {
+      "id": 2,
+      "businessProcessType": "Bad Debt Writeoff Event",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/8/2025 3:17:00 AM"
+    },
+    {
+      "id": 3,
+      "businessProcessType": "Approve Expense Report",
+      "byUser": "agarcia@i8cloud.com / Alex Garcia",
+      "lastChanged": "11/15/2025 2:30:45 PM"
+    },
+    {
+      "id": 4,
+      "businessProcessType": "Submit Purchase Requisition",
+      "byUser": "jsmith@i8cloud.com / John Smith",
+      "lastChanged": "10/22/2025 9:15:20 AM"
+    },
+    {
+      "id": 5,
+      "businessProcessType": "Manage Employee Benefits",
+      "byUser": "hr.admin@i8cloud.com / HR Administrator",
+      "lastChanged": "12/1/2025 11:45:30 AM"
+    },
+    {
+      "id": 6,
+      "businessProcessType": "Process Payroll",
+      "byUser": "payroll.admin@i8cloud.com / Payroll Administrator",
+      "lastChanged": "11/28/2025 4:20:15 PM"
+    },
+    {
+      "id": 7,
+      "businessProcessType": "Create Journal Entry",
+      "byUser": "finance.admin@i8cloud.com / Finance Admin",
+      "lastChanged": "12/5/2025 10:30:00 AM"
+    },
+    {
+      "id": 8,
+      "businessProcessType": "Approve Vendor Invoice",
+      "byUser": "ap.manager@i8cloud.com / AP Manager",
+      "lastChanged": "11/20/2025 3:45:22 PM"
+    },
+    {
+      "id": 9,
+      "businessProcessType": "Hire Employee",
+      "byUser": "recruiter@i8cloud.com / Recruitment Specialist",
+      "lastChanged": "10/18/2025 1:15:40 PM"
+    },
+    {
+      "id": 10,
+      "businessProcessType": "Terminate Employee",
+      "byUser": "hr.manager@i8cloud.com / HR Manager",
+      "lastChanged": "11/30/2025 5:00:10 PM"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "uuid": "perm-001",
+    "subject": "User",
+    "action": "create"
+  },
+  {
+    "uuid": "perm-002",
+    "subject": "User",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-003",
+    "subject": "User",
+    "action": "update"
+  },
+  {
+    "uuid": "perm-004",
+    "subject": "User",
+    "action": "delete"
+  },
+  {
+    "uuid": "perm-005",
+    "subject": "Role",
+    "action": "create"
+  },
+  {
+    "uuid": "perm-006",
+    "subject": "Role",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-007",
+    "subject": "Role",
+    "action": "update"
+  },
+  {
+    "uuid": "perm-008",
+    "subject": "Role",
+    "action": "delete"
+  },
+  {
+    "uuid": "perm-009",
+    "subject": "Permission",
+    "action": "create"
+  },
+  {
+    "uuid": "perm-010",
+    "subject": "Permission",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-011",
+    "subject": "Permission",
+    "action": "update"
+  },
+  {
+    "uuid": "perm-012",
+    "subject": "Permission",
+    "action": "delete"
+  },
+  {
+    "uuid": "perm-013",
+    "subject": "Dashboard",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-014",
+    "subject": "Audit",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-015",
+    "subject": "Audit",
+    "action": "export"
+  },
+  {
+    "uuid": "perm-016",
+    "subject": "Security",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-017",
+    "subject": "Security",
+    "action": "update"
+  },
+  {
+    "uuid": "perm-018",
+    "subject": "Integration",
+    "action": "create"
+  },
+  {
+    "uuid": "perm-019",
+    "subject": "Integration",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-020",
+    "subject": "Integration",
+    "action": "update"
+  },
+  {
+    "uuid": "perm-021",
+    "subject": "Integration",
+    "action": "delete"
+  },
+  {
+    "uuid": "perm-022",
+    "subject": "RaaS",
+    "action": "read"
+  },
+  {
+    "uuid": "perm-023",
+    "subject": "RaaS",
+    "action": "export"
+  }
+]

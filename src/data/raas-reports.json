@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "totalReports": 34,
+    "reportsWithISU": 3,
+    "nonISUReports": 31,
+    "temporaryReports": 6
+  },
+  "reports": [
+    {
+      "uuid": "report-001",
+      "customReport": "CR Test New Hire Data",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": true,
+      "type": "ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-01T10:00:00Z"
+    },
+    {
+      "uuid": "report-002",
+      "customReport": "DNU Pay input",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": true,
+      "type": "ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-01T10:00:00Z"
+    },
+    {
+      "uuid": "report-003",
+      "customReport": "DNU worker Pay inputs",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": true,
+      "type": "ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-01T10:00:00Z"
+    },
+    {
+      "uuid": "report-004",
+      "customReport": "KK_Employees",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": true,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-02T10:00:00Z",
+      "updatedAt": "2025-01-02T10:00:00Z"
+    },
+    {
+      "uuid": "report-005",
+      "customReport": "CR Beginning Balance",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "uuid": "report-006",
+      "customReport": "CR Beginning_Balance HS",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "uuid": "report-007",
+      "customReport": "CR BIRT Certificate HS",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "uuid": "report-008",
+      "customReport": "CR BIRT OnePartElection HS",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "uuid": "report-009",
+      "customReport": "CR BIRT Training HS",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "uuid": "report-010",
+      "customReport": "CR Employee Demographics",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-04T10:00:00Z",
+      "updatedAt": "2025-01-04T10:00:00Z"
+    },
+    {
+      "uuid": "report-011",
+      "customReport": "CR Pay Component Details",
+      "reportOwner": "admin@i8cloud.com / System Admin",
+      "exemptFromExpiration": true,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-05T10:00:00Z",
+      "updatedAt": "2025-01-05T10:00:00Z"
+    },
+    {
+      "uuid": "report-012",
+      "customReport": "CR Quarterly Bonus Report",
+      "reportOwner": "admin@i8cloud.com / System Admin",
+      "exemptFromExpiration": true,
+      "type": "NON-ISU",
+      "isTemporary": false,
+      "createdAt": "2025-01-06T10:00:00Z",
+      "updatedAt": "2025-01-06T10:00:00Z"
+    },
+    {
+      "uuid": "report-013",
+      "customReport": "Temp Report - Jan 2025",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-01-15T10:00:00Z",
+      "expiresAt": "2025-02-15T10:00:00Z"
+    },
+    {
+      "uuid": "report-014",
+      "customReport": "Temp Payroll Analysis",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-16T10:00:00Z",
+      "updatedAt": "2025-01-16T10:00:00Z",
+      "expiresAt": "2025-02-16T10:00:00Z"
+    },
+    {
+      "uuid": "report-015",
+      "customReport": "Temp Benefits Overview",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-17T10:00:00Z",
+      "updatedAt": "2025-01-17T10:00:00Z",
+      "expiresAt": "2025-02-17T10:00:00Z"
+    },
+    {
+      "uuid": "report-016",
+      "customReport": "Temp Tax Report Q1",
+      "reportOwner": "admin@i8cloud.com / System Admin",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-18T10:00:00Z",
+      "updatedAt": "2025-01-18T10:00:00Z",
+      "expiresAt": "2025-04-18T10:00:00Z"
+    },
+    {
+      "uuid": "report-017",
+      "customReport": "Temp Compliance Check",
+      "reportOwner": "hsolanki@i8cloudconsulting.com / Himani Solanki",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-19T10:00:00Z",
+      "updatedAt": "2025-01-19T10:00:00Z",
+      "expiresAt": "2025-03-19T10:00:00Z"
+    },
+    {
+      "uuid": "report-018",
+      "customReport": "Temp Audit Trail",
+      "reportOwner": "lmcneil@i8 / Logan McNeil",
+      "exemptFromExpiration": false,
+      "type": "NON-ISU",
+      "isTemporary": true,
+      "createdAt": "2025-01-20T10:00:00Z",
+      "updatedAt": "2025-01-20T10:00:00Z",
+      "expiresAt": "2025-02-20T10:00:00Z"
+    }
+  ],
+  "authorizedUsers": [],
+  "authorizedSecurityGroups": []
+}

@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "totalSecurityGroup": 996,
+    "userBased": 172,
+    "roleBased": 226,
+    "aggregation": 12,
+    "intersection": 28,
+    "integrationSystem": 137
+  },
+  "securityPoliciesChanged": {
+    "total": 129,
+    "businessSecurity": 2,
+    "domainSecurity": 127
+  },
+  "segregationOfDuties": {
+    "totalExceptions": 20
+  },
+  "securityGroupAssignmentChanges": {
+    "roleBasedGroups": 1206,
+    "userBasedGroups": 25
+  },
+  "securityGroupCreated": [
+    {
+      "id": 1,
+      "securityGroupType": "User Based",
+      "members": "jsmith, agarcia, mchen",
+      "createdMoment": "2024-01-15 09:30:00"
+    },
+    {
+      "id": 2,
+      "securityGroupType": "Role Based",
+      "members": "HR Manager, Finance Lead",
+      "createdMoment": "2024-01-14 14:20:00"
+    },
+    {
+      "id": 3,
+      "securityGroupType": "Aggregation",
+      "members": "Group A, Group B, Group C",
+      "createdMoment": "2024-01-13 10:15:00"
+    }
+  ],
+  "securityGroupAssignmentChanges": [
+    {
+      "id": 1,
+      "completedBy": "admin@i8cloud.com",
+      "securityHistory": "Added 5 users to HR Security Group",
+      "forWhom": "HR Department",
+      "effectiveDate": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "completedBy": "security.admin@i8cloud.com",
+      "securityHistory": "Removed Finance Access",
+      "forWhom": "John Smith",
+      "effectiveDate": "2024-01-14"
+    },
+    {
+      "id": 3,
+      "completedBy": "hr.manager@i8cloud.com",
+      "securityHistory": "Updated Payroll Permissions",
+      "forWhom": "Payroll Team",
+      "effectiveDate": "2024-01-13"
+    }
+  ]
+}

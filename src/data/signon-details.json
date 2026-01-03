@@ -1,0 +1,224 @@
+{
+  "signons": [
+    {
+      "id": 1,
+      "systemAccount": "admin@i8cloud.com",
+      "signonTime": "2024-01-15 09:23:45",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account disabled",
+      "accountLocked": true,
+      "accountDisabled": true,
+      "accountExpired": false
+    },
+    {
+      "id": 2,
+      "systemAccount": "payroll.processor@i8cloud.com",
+      "signonTime": "2024-01-15 08:15:22",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account locked",
+      "accountLocked": true,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 3,
+      "systemAccount": "hr.manager@i8cloud.com",
+      "signonTime": "2024-01-15 07:45:10",
+      "authenticationType": "User Name Password",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 4,
+      "systemAccount": "integration.user@i8cloud.com",
+      "signonTime": "2024-01-15 06:30:18",
+      "authenticationType": "OAuth 2.0",
+      "status": "Failed",
+      "failureMessage": "Invalid credentials",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 5,
+      "systemAccount": "finance.admin@i8cloud.com",
+      "signonTime": "2024-01-15 05:20:33",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account disabled",
+      "accountLocked": false,
+      "accountDisabled": true,
+      "accountExpired": false
+    },
+    {
+      "id": 6,
+      "systemAccount": "reporting.service@i8cloud.com",
+      "signonTime": "2024-01-15 04:15:45",
+      "authenticationType": "Basic Auth",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 7,
+      "systemAccount": "audit.viewer@i8cloud.com",
+      "signonTime": "2024-01-15 03:10:28",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "Password expired",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": true
+    },
+    {
+      "id": 8,
+      "systemAccount": "data.analyst@i8cloud.com",
+      "signonTime": "2024-01-15 02:05:12",
+      "authenticationType": "SSO Login",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 9,
+      "systemAccount": "system.admin@i8cloud.com",
+      "signonTime": "2024-01-15 01:00:55",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account locked",
+      "accountLocked": true,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 10,
+      "systemAccount": "backup.service@i8cloud.com",
+      "signonTime": "2024-01-15 00:45:30",
+      "authenticationType": "Trusted",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 11,
+      "systemAccount": "temp.contractor@i8cloud.com",
+      "signonTime": "2024-01-14 23:30:15",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account disabled",
+      "accountLocked": false,
+      "accountDisabled": true,
+      "accountExpired": false
+    },
+    {
+      "id": 12,
+      "systemAccount": "project.manager@i8cloud.com",
+      "signonTime": "2024-01-14 22:15:42",
+      "authenticationType": "User Name Password",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 13,
+      "systemAccount": "security.officer@i8cloud.com",
+      "signonTime": "2024-01-14 21:00:18",
+      "authenticationType": "MFA",
+      "status": "Failed",
+      "failureMessage": "MFA verification failed",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 14,
+      "systemAccount": "vendor.portal@i8cloud.com",
+      "signonTime": "2024-01-14 20:45:55",
+      "authenticationType": "OAuth 2.0",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 15,
+      "systemAccount": "legacy.system@i8cloud.com",
+      "signonTime": "2024-01-14 19:30:22",
+      "authenticationType": "Basic Auth",
+      "status": "Failed",
+      "failureMessage": "System Account locked",
+      "accountLocked": true,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 16,
+      "systemAccount": "mobile.app@i8cloud.com",
+      "signonTime": "2024-01-14 18:15:40",
+      "authenticationType": "Device Trusted",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 17,
+      "systemAccount": "api.gateway@i8cloud.com",
+      "signonTime": "2024-01-14 17:00:12",
+      "authenticationType": "OAuth 2.0",
+      "status": "Failed",
+      "failureMessage": "Token expired",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": true
+    },
+    {
+      "id": 18,
+      "systemAccount": "scheduler.job@i8cloud.com",
+      "signonTime": "2024-01-14 16:45:33",
+      "authenticationType": "Trusted",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    },
+    {
+      "id": 19,
+      "systemAccount": "test.automation@i8cloud.com",
+      "signonTime": "2024-01-14 15:30:28",
+      "authenticationType": "User Name Password",
+      "status": "Failed",
+      "failureMessage": "System Account disabled",
+      "accountLocked": false,
+      "accountDisabled": true,
+      "accountExpired": false
+    },
+    {
+      "id": 20,
+      "systemAccount": "monitoring.service@i8cloud.com",
+      "signonTime": "2024-01-14 14:15:50",
+      "authenticationType": "Basic Auth",
+      "status": "Successful",
+      "failureMessage": "",
+      "accountLocked": false,
+      "accountDisabled": false,
+      "accountExpired": false
+    }
+  ]
+}

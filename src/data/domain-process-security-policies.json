@@ -1,0 +1,64 @@
+{
+  "domainSecurityPolicies": [
+    {
+      "id": 1,
+      "domainSecurityPolicy": "Process: Period End",
+      "byUser": "abisaria@i8cloudconsulting.com / Anshul Bisaria",
+      "lastChanged": "10/30/2025 1:00:28 AM"
+    },
+    {
+      "id": 2,
+      "domainSecurityPolicy": "Process: Customer Writeoff - Cancel",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/5/2025 3:39:21 AM"
+    },
+    {
+      "id": 3,
+      "domainSecurityPolicy": "Process: Customer Writeoff - Core",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/8/2025 2:52:38 AM"
+    },
+    {
+      "id": 4,
+      "domainSecurityPolicy": "Process: Customer Writeoff - Single Invoice",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/8/2025 3:08:58 AM"
+    },
+    {
+      "id": 5,
+      "domainSecurityPolicy": "Process: Customer Writeoff - View",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/8/2025 3:08:58 AM"
+    },
+    {
+      "id": 6,
+      "domainSecurityPolicy": "Process: Customer Writeoff (NEW)",
+      "byUser": "asharma1@i8cloudconsulting.com / Ayush Sharma",
+      "lastChanged": "12/8/2025 3:08:58 AM"
+    },
+    {
+      "id": 7,
+      "domainSecurityPolicy": "Process: Bank Reconciliation",
+      "byUser": "finance.admin@i8cloud.com / Finance Admin",
+      "lastChanged": "11/25/2025 10:15:30 AM"
+    },
+    {
+      "id": 8,
+      "domainSecurityPolicy": "Process: Fixed Asset Management",
+      "byUser": "accounting.lead@i8cloud.com / Accounting Lead",
+      "lastChanged": "10/15/2025 2:45:18 PM"
+    },
+    {
+      "id": 9,
+      "domainSecurityPolicy": "Process: Tax Reporting",
+      "byUser": "tax.specialist@i8cloud.com / Tax Specialist",
+      "lastChanged": "11/10/2025 9:30:40 AM"
+    },
+    {
+      "id": 10,
+      "domainSecurityPolicy": "Process: Budget Planning",
+      "byUser": "budget.controller@i8cloud.com / Budget Controller",
+      "lastChanged": "12/1/2025 11:20:25 AM"
+    }
+  ]
+}

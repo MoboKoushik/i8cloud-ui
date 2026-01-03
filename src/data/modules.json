@@ -1,0 +1,148 @@
+{
+  "modules": [
+    {
+      "id": "mod_001",
+      "key": "security_groups",
+      "name": "Security Groups",
+      "description": "Manage security group assignments and policies",
+      "icon": "IconShield",
+      "route": "/security-groups",
+      "category": "Security",
+      "order": 1,
+      "isActive": true,
+      "availableActions": ["view", "view_details", "create", "edit", "delete", "export", "assign_members"]
+    },
+    {
+      "id": "mod_002",
+      "key": "integration",
+      "name": "Integration Dashboard",
+      "description": "Monitor and manage system integrations",
+      "icon": "IconPlugConnected",
+      "route": "/integration",
+      "category": "Integration",
+      "order": 2,
+      "isActive": true,
+      "availableActions": ["view", "view_details", "manage", "restart", "configure", "export"]
+    },
+    {
+      "id": "mod_003",
+      "key": "access_audit",
+      "name": "Access Audit",
+      "description": "View audit logs and access history",
+      "icon": "IconFileSearch",
+      "route": "/audit-log",
+      "category": "Audit",
+      "order": 3,
+      "isActive": true,
+      "availableActions": ["view", "export", "generate_reports", "archive"]
+    },
+    {
+      "id": "mod_004",
+      "key": "sign_on",
+      "name": "Sign-on Monitoring",
+      "description": "Track and analyze user sign-on activity",
+      "icon": "IconLogin",
+      "route": "/sign-on",
+      "category": "Audit",
+      "order": 4,
+      "isActive": true,
+      "availableActions": ["view", "view_details", "block_users", "block_ips", "investigate", "export"]
+    },
+    {
+      "id": "mod_005",
+      "key": "workday",
+      "name": "Workday Accounts",
+      "description": "Manage Workday account details",
+      "icon": "IconBriefcase",
+      "route": "/workday",
+      "category": "Accounts",
+      "order": 5,
+      "isActive": true,
+      "availableActions": ["view", "edit", "deactivate", "export"]
+    },
+    {
+      "id": "mod_006",
+      "key": "policy",
+      "name": "Policy Management",
+      "description": "Review and approve policy changes",
+      "icon": "IconFileDescription",
+      "route": "/policies",
+      "category": "Compliance",
+      "order": 6,
+      "isActive": true,
+      "availableActions": ["view", "approve", "reject", "comment", "export"]
+    },
+    {
+      "id": "mod_007",
+      "key": "sod",
+      "name": "SoD Exceptions",
+      "description": "Manage segregation of duties exceptions",
+      "icon": "IconAlertTriangle",
+      "route": "/sod-exceptions",
+      "category": "Compliance",
+      "order": 7,
+      "isActive": true,
+      "availableActions": ["view", "approve", "reject", "investigate", "export"]
+    },
+    {
+      "id": "mod_008",
+      "key": "raas",
+      "name": "RaaS Reports",
+      "description": "Access publicly exposed reports",
+      "icon": "IconReport",
+      "route": "/raas-reports",
+      "category": "Reports",
+      "order": 8,
+      "isActive": true,
+      "availableActions": ["view", "view_public", "export", "configure", "publish"]
+    },
+    {
+      "id": "mod_009",
+      "key": "permissions",
+      "name": "Permissions",
+      "description": "View and manage system permissions",
+      "icon": "IconLock",
+      "route": "/admin/permissions",
+      "category": "Admin",
+      "order": 9,
+      "isActive": true,
+      "availableActions": ["view"]
+    },
+    {
+      "id": "mod_010",
+      "key": "roles",
+      "name": "Roles",
+      "description": "Create and manage user roles",
+      "icon": "IconUserCheck",
+      "route": "/admin/roles",
+      "category": "Admin",
+      "order": 10,
+      "isActive": true,
+      "availableActions": ["view", "create", "edit", "delete"]
+    },
+    {
+      "id": "mod_011",
+      "key": "users",
+      "name": "Users",
+      "description": "Manage user accounts and assignments",
+      "icon": "IconUsers",
+      "route": "/admin/users",
+      "category": "Admin",
+      "order": 11,
+      "isActive": true,
+      "availableActions": ["view", "create", "edit", "delete", "change_role"]
+    },
+    {
+      "id": "mod_012",
+      "key": "audit",
+      "name": "Audit Logs",
+      "description": "View system audit logs and activity",
+      "icon": "IconClipboardList",
+      "route": "/admin/audit",
+      "category": "Admin",
+      "order": 12,
+      "isActive": true,
+      "availableActions": ["view", "export"]
+    }
+  ]
+}

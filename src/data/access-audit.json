@@ -1,0 +1,93 @@
+{
+  "signonDetails": {
+    "totalSystemAccounts": 143,
+    "totalSignons": 2974,
+    "failedSignons": 251,
+    "successfulSignons": 2723,
+    "byAuthenticationType": {
+      "ssoLogin": 0,
+      "basicAuth": 32,
+      "oauth2": 5,
+      "trusted": 35,
+      "mfa": 0,
+      "deviceTrusted": 0
+    }
+  },
+  "workdayAccounts": {
+    "totalAccounts": 1305,
+    "accountsLocked": 66,
+    "passwordExpired": 8,
+    "accountsExpiringSoon": 55,
+    "inactiveFor30Days": 1305,
+    "implementers": 12,
+    "integration": 319,
+    "pieChart": {
+      "value1": 55,
+      "value2": 8,
+      "value3": 66
+    }
+  },
+  "unidentifiedUsers": [
+    {
+      "uuid": "user-001",
+      "name": "subham sankar lenka",
+      "authenticationType": "(Blank)",
+      "timeOfLogin": "No Selection"
+    },
+    {
+      "uuid": "user-002",
+      "name": "Hemanth Reddy Kommidi",
+      "authenticationType": "Trusted",
+      "timeOfLogin": "2025-01-01T08:30:00Z"
+    },
+    {
+      "uuid": "user-003",
+      "name": "Daily Digest Integration System User",
+      "authenticationType": "Basic Auth",
+      "timeOfLogin": "2025-01-01T09:00:00Z"
+    },
+    {
+      "uuid": "user-004",
+      "name": "EXAMONE_HIRE_ACCOUNT_USR",
+      "authenticationType": "OAuth 2.0",
+      "timeOfLogin": "2025-01-01T10:00:00Z"
+    },
+    {
+      "uuid": "user-005",
+      "name": "Sankalp Srivastava",
+      "authenticationType": "MFA",
+      "timeOfLogin": "2025-01-01T11:00:00Z"
+    },
+    {
+      "uuid": "user-006",
+      "name": "Sharat Chandra M",
+      "authenticationType": "Trusted",
+      "timeOfLogin": "2025-01-01T12:00:00Z"
+    },
+    {
+      "uuid": "user-007",
+      "name": "Logan McNeil",
+      "authenticationType": "SSO Login",
+      "timeOfLogin": "2025-01-01T13:00:00Z"
+    },
+    {
+      "uuid": "user-008",
+      "name": "JPMC_MICROSITE_FINAL_REPORT",
+      "authenticationType": "Device Trusted",
+      "timeOfLogin": "2025-01-01T14:00:00Z"
+    }
+  ],
+  "authenticationTypes": [
+    "SSO Login",
+    "Basic Auth",
+    "OAuth 2.0",
+    "Trusted",
+    "MFA",
+    "Device Trusted",
+    "(Blank)"
+  ],
+  "proxyHistory": {
+    "count": 92,
+    "filter": "All"
+  }
+}

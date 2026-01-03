@@ -1,0 +1,117 @@
+[
+  {
+    "uuid": "rp-001",
+    "role_id": "role-001",
+    "permission_id": "perm-001"
+  },
+  {
+    "uuid": "rp-002",
+    "role_id": "role-001",
+    "permission_id": "perm-002"
+  },
+  {
+    "uuid": "rp-003",
+    "role_id": "role-001",
+    "permission_id": "perm-003"
+  },
+  {
+    "uuid": "rp-004",
+    "role_id": "role-001",
+    "permission_id": "perm-004"
+  },
+  {
+    "uuid": "rp-005",
+    "role_id": "role-001",
+    "permission_id": "perm-005"
+  },
+  {
+    "uuid": "rp-006",
+    "role_id": "role-001",
+    "permission_id": "perm-006"
+  },
+  {
+    "uuid": "rp-007",
+    "role_id": "role-001",
+    "permission_id": "perm-007"
+  },
+  {
+    "uuid": "rp-008",
+    "role_id": "role-001",
+    "permission_id": "perm-008"
+  },
+  {
+    "uuid": "rp-009",
+    "role_id": "role-001",
+    "permission_id": "perm-009"
+  },
+  {
+    "uuid": "rp-010",
+    "role_id": "role-001",
+    "permission_id": "perm-010"
+  },
+  {
+    "uuid": "rp-011",
+    "role_id": "role-001",
+    "permission_id": "perm-011"
+  },
+  {
+    "uuid": "rp-012",
+    "role_id": "role-001",
+    "permission_id": "perm-012"
+  },
+  {
+    "uuid": "rp-013",
+    "role_id": "role-001",
+    "permission_id": "perm-013"
+  },
+  {
+    "uuid": "rp-014",
+    "role_id": "role-001",
+    "permission_id": "perm-014"
+  },
+  {
+    "uuid": "rp-015",
+    "role_id": "role-001",
+    "permission_id": "perm-015"
+  },
+  {
+    "uuid": "rp-016",
+    "role_id": "role-002",
+    "permission_id": "perm-013"
+  },
+  {
+    "uuid": "rp-017",
+    "role_id": "role-002",
+    "permission_id": "perm-019"
+  },
+  {
+    "uuid": "rp-018",
+    "role_id": "role-002",
+    "permission_id": "perm-022"
+  },
+  {
+    "uuid": "rp-019",
+    "role_id": "role-002",
+    "permission_id": "perm-023"
+  },
+  {
+    "uuid": "rp-020",
+    "role_id": "role-003",
+    "permission_id": "perm-013"
+  },
+  {
+    "uuid": "rp-021",
+    "role_id": "role-003",
+    "permission_id": "perm-014"
+  },
+  {
+    "uuid": "rp-022",
+    "role_id": "role-003",
+    "permission_id": "perm-015"
+  },
+  {
+    "uuid": "rp-023",
+    "role_id": "role-003",
+    "permission_id": "perm-016"
+  }
+]
