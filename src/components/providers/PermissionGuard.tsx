@@ -5,7 +5,13 @@
  * Hides elements if user lacks required permissions
  */
 
-import { ReactNode } from 'react';
+/**
+ * PermissionGuard Component
+ *
+ * Conditionally renders children based on user permissions
+ * Hides elements if user lacks required permissions
+ */
+import type { ReactNode } from 'react';
 import { usePermissions } from '../../hooks/usePermissions';
 
 interface PermissionGuardProps {

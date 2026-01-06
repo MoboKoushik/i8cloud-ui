@@ -6,7 +6,7 @@
  */
 
 import modulesData from '../../data/modules.json';
-import { Module, ServiceResponse } from '../../types';
+import type { Module, ServiceResponse } from '../../types';
 
 /**
  * Simulates API latency

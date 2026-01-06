@@ -5,8 +5,8 @@
  * The lookup map enables O(1) permission checks
  */
 
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Permission, PermissionMap } from '../../types';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { Permission, PermissionMap } from '../../types';
 
 interface PermissionsState {
   permissions: Permission[];
@@ -29,7 +29,7 @@ const permissionsSlice = createSlice({
 
       // Create lookup map for O(1) permission checks
       state.permissionMap = action.payload.reduce((acc, perm) => {
-        acc[perm.key] = true;
+        acc[perm.key as string] = true;
         return acc;
       }, {} as PermissionMap);
     },

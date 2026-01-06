@@ -6,7 +6,7 @@
 
 import { Badge, Group, Tooltip } from '@mantine/core';
 import { IconLock } from '@tabler/icons-react';
-import { Role } from '../../types';
+import type { Role } from '../../types';
 
 interface RoleBadgeProps {
   role: Role;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import {
   Box,
   Container,
@@ -15,20 +15,20 @@ import {
 import { useForm } from '@mantine/form';
 import { IconArrowLeft, IconDeviceFloppy } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getUsers, getRoles, getUserById, createUser, updateUser } from '@/services/dataManager';
+import { getRoles, getUserById, createUser, updateUser } from '@/services/dataManager';
 import { notifications } from '@mantine/notifications';
 
-interface User {
-  id: string;
-  username: string;
-  password: string;
-  email: string;
-  fullName: string;
-  roleId: string;
-  status: string;
-  createdAt: string;
-  lastLogin: string;
-}
+// interface User {
+//   id: string;
+//   username: string;
+//   password: string;
+//   email: string;
+//   fullName: string;
+//   roleId: string;
+//   status: string;
+//   createdAt: string;
+//   lastLogin: string;
+// }
 
 const UserFormPage = () => {
   const navigate = useNavigate();
@@ -101,7 +101,7 @@ const UserFormPage = () => {
     try {
       if (isEditMode && id) {
         // Update existing user
-        const existingUser = getUserById(id);
+        // const existingUser = getUserById(id);
         const updates: any = {
           fullName: values.fullName,
           email: values.email,

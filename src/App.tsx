@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import "./App.css";

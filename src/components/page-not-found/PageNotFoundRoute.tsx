@@ -5,7 +5,7 @@
  */
 
 import { Container, Title, Text, Button, Group, Box, Stack } from '@mantine/core';
-import { IconError404, IconHome, IconArrowLeft } from '@tabler/icons-react';
+import { IconHome, IconArrowLeft } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/routes';
 

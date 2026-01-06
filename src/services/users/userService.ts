@@ -9,7 +9,7 @@
 
 import usersData from '../../data/users.json';
 import rolesData from '../../data/roles.json';
-import { User, UserWithRole, ServiceResponse, UserStatus } from '../../types';
+import type { User, UserWithRole, ServiceResponse, UserStatus } from '../../types';
 
 /**
  * Simulates API latency
@@ -53,12 +53,12 @@ export const getUsersWithRoles = async (): Promise<ServiceResponse<UserWithRole[
 
   try {
     const usersWithRoles = usersData.users.map((user) => {
-      const role = rolesData.roles.find((r) => r.id === user.roleId);
+      const role = rolesData.find((r) => r.uuid === user.roleId);
       return {
         ...user,
         password: undefined as any,
         roleName: role?.name || 'Unknown',
-        roleKey: role?.key || 'unknown',
+        roleKey: role?.uuid || 'unknown',
       } as UserWithRole;
     });
 
@@ -155,7 +155,7 @@ export const countUsersWithRole = async (roleKey: string): Promise<ServiceRespon
   await simulateApiLatency();
 
   try {
-    const role = rolesData.roles.find((r) => r.key === roleKey);
+    const role = rolesData.find((r) => r.uuid === roleKey);
     if (!role) {
       return {
         success: true,
@@ -163,7 +163,7 @@ export const countUsersWithRole = async (roleKey: string): Promise<ServiceRespon
       };
     }
 
-    const count = usersData.users.filter((u) => u.roleId === role.id).length;
+    const count = usersData.users.filter((u) => u.roleId === role.uuid).length;
 
     return {
       success: true,
@@ -262,7 +262,7 @@ export const createUser = async (
     }
 
     // Validate role exists
-    const role = rolesData.roles.find((r) => r.id === userData.roleId);
+    const role = rolesData.find((r) => r.uuid === userData.roleId);
     if (!role) {
       return {
         success: false,
@@ -274,15 +274,15 @@ export const createUser = async (
     }
 
     // Validate role is active
-    if (!role.isActive) {
-      return {
-        success: false,
-        error: {
-          code: 'ROLE_INACTIVE',
-          message: 'Cannot assign inactive role to user',
-        },
-      };
-    }
+    // if (!role.isActive) {
+    //   return {
+    //     success: false,
+    //     error: {
+    //       code: 'ROLE_INACTIVE',
+    //       message: 'Cannot assign inactive role to user',
+    //     },
+    //   };
+    // }
 
     // Generate new user ID
     const newId = `user_${Date.now()}`;
@@ -407,10 +407,7 @@ export const updateUser = async (
  * Change user's role
  */
 export const changeUserRole = async (
-  userId: string,
-  newRoleId: string,
-  currentUserId: string,
-  reason?: string
+userId: string, newRoleId: string, currentUserId: string, 
 ): Promise<ServiceResponse<User>> => {
   await simulateApiLatency();
 
@@ -440,7 +437,7 @@ export const changeUserRole = async (
     }
 
     // Validate new role exists
-    const newRole = rolesData.roles.find((r) => r.id === newRoleId);
+    const newRole = rolesData.find((r) => r.uuid === newRoleId);
     if (!newRole) {
       return {
         success: false,
@@ -452,15 +449,15 @@ export const changeUserRole = async (
     }
 
     // Validate new role is active
-    if (!newRole.isActive) {
-      return {
-        success: false,
-        error: {
-          code: 'ROLE_INACTIVE',
-          message: 'Cannot assign inactive role to user',
-        },
-      };
-    }
+    // if (!newRole.isActive) {
+    //   return {
+    //     success: false,
+    //     error: {
+    //       code: 'ROLE_INACTIVE',
+    //       message: 'Cannot assign inactive role to user',
+    //     },
+    //   };
+    // }
 
     const updatedUser: User = {
       ...user,

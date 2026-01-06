@@ -4,7 +4,6 @@
  * Dropdown for selecting a role with permission preview
  */
 
-import { useState } from 'react';
 import {
   Select,
   Text,
@@ -15,7 +14,7 @@ import {
   Accordion,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Role, Permission } from '../../types';
+import type { Role, Permission } from '../../types';
 import { PermissionBadge } from '../atoms/PermissionBadge';
 
 interface RoleSelectorProps {
@@ -46,16 +45,16 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({
 
   const selectedRole = roles.find((r) => r.id === selectedRoleId);
 
-  const rolePermissions = allPermissions.filter((p) =>
+  const rolePermissions = allPermissions.filter((p: any) =>
     selectedRole?.permissions.includes(p.key)
   );
 
   // Group permissions by module
   const groupedPermissions = rolePermissions.reduce((acc, permission) => {
-    if (!acc[permission.module]) {
-      acc[permission.module] = [];
+    if (!acc[permission.module as string]) {
+      acc[permission.module as string] = [];
     }
-    acc[permission.module].push(permission);
+    acc[permission.module as string].push(permission);
     return acc;
   }, {} as Record<string, Permission[]>);
 
@@ -126,7 +125,7 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({
                 </Accordion.Control>
                 <Accordion.Panel>
                   <Stack gap="xs">
-                    {modulePermissions.map((permission) => (
+                    {modulePermissions.map((permission: any) => (
                       <PermissionBadge
                         key={permission.id}
                         permission={permission}

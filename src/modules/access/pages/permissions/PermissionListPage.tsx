@@ -93,32 +93,32 @@ const PermissionListPage = () => {
 
     // Generate UUID base
     // eslint-disable-next-line react-hooks/purity
-    const timestamp = Date.now();
-    const baseUuid = `perm-${timestamp}`;
+    // const timestamp = Date.now();
+    // const baseUuid = `perm-${timestamp}`;
 
     // Create 4 permission objects (create, read, update, delete)
-    const newPermissions = [
-      {
-        uuid: `${baseUuid}-1`,
-        subject: moduleName,
-        action: 'create',
-      },
-      {
-        uuid: `${baseUuid}-2`,
-        subject: moduleName,
-        action: 'read',
-      },
-      {
-        uuid: `${baseUuid}-3`,
-        subject: moduleName,
-        action: 'update',
-      },
-      {
-        uuid: `${baseUuid}-4`,
-        subject: moduleName,
-        action: 'delete',
-      },
-    ];
+    // const newPermissions = [
+    //   {
+    //     uuid: `${baseUuid}-1`,
+    //     subject: moduleName,
+    //     action: 'create',
+    //   },
+    //   {
+    //     uuid: `${baseUuid}-2`,
+    //     subject: moduleName,
+    //     action: 'read',
+    //   },
+    //   {
+    //     uuid: `${baseUuid}-3`,
+    //     subject: moduleName,
+    //     action: 'update',
+    //   },
+    //   {
+    //     uuid: `${baseUuid}-4`,
+    //     subject: moduleName,
+    //     action: 'delete',
+    //   },
+    // ];
 
     // Create permissions using dataManager
     createModulePermissions(moduleName);

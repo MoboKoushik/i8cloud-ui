@@ -4,7 +4,7 @@
  * Displays users in a table with actions
  */
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import {
   Table,
   Group,
@@ -26,7 +26,7 @@ import {
   IconCircleX,
   IconPower,
 } from '@tabler/icons-react';
-import { User, Role } from '../../types';
+import type { User, Role } from '../../types';
 import { StatusBadge } from '../atoms/StatusBadge';
 import { EmptyState } from '../atoms/EmptyState';
 import { formatDate, getInitials } from '../../utils/formatters';

@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/store/hooks";
 import { Navigate, Outlet } from "react-router-dom";
-import { RootState } from "@/store/store";
+import type { RootState } from "@/store/store";
 
 const RedirectIfAuthenticatedRoutes = () => {
   const authState = useAppSelector((state: RootState) => state.auth);

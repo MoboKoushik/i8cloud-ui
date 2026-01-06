@@ -2,8 +2,8 @@
  * UI Slice - UI State Management
  */
 
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Notification } from '../../types';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { Notification } from '../../types';
 
 interface UIState {
   sidebarCollapsed: boolean;

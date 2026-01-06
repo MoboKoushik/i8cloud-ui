@@ -4,7 +4,7 @@
  * Displays roles in a table with actions
  */
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import {
   Table,
   Group,
@@ -24,8 +24,8 @@ import {
   IconPower,
   IconCircleX,
 } from '@tabler/icons-react';
-import { useNavigate } from 'react-router-dom';
-import { Role } from '../../types';
+// import { useNavigate } from 'react-router-dom';
+import type { Role } from '../../types';
 import { StatusBadge } from '../atoms/StatusBadge';
 import { RoleBadge } from '../atoms/RoleBadge';
 import { formatDate } from '../../utils/formatters';
@@ -54,7 +54,7 @@ export const RoleTable: React.FC<RoleTableProps> = ({
   canDelete = false,
   canCreate = false,
 }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   if (roles.length === 0) {
     return (

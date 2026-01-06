@@ -6,7 +6,7 @@
 
 import { useContext, useMemo } from 'react';
 import { AbilityContext } from '../contexts/AbilityContext';
-import { Actions, Subjects } from '../config/ability';
+import type { Actions, Subjects } from '../config/ability';
 
 export const useAbility = () => {
   const ability = useContext(AbilityContext);
@@ -55,7 +55,7 @@ export const useAbility = () => {
   );
 
   const canExport = useMemo(
-    () => (subject: Subjects) => ability.can('export', subject),
+    () => (subject: Subjects) => ability.can('read', subject),
     [ability]
   );
 

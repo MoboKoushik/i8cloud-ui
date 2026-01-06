@@ -4,8 +4,7 @@
  * Displays audit log entries in a timeline format
  * Shows who did what, when, and why
  */
-
-import { useState } from 'react';
+import { useState, useCallback, type Key, type JSXElementConstructor, type ReactElement, type ReactNode, type ReactPortal } from 'react';
 import {
   Stack,
   Group,
@@ -21,7 +20,6 @@ import {
   TextInput,
 } from '@mantine/core';
 import {
-  IconUser,
   IconKey,
   IconEdit,
   IconTrash,
@@ -32,7 +30,7 @@ import {
   IconSearch,
   IconFilter,
 } from '@tabler/icons-react';
-import { AuditLog } from '../../types';
+import type { AuditLog } from '../../types';
 import { formatDate, getInitials, getAuditActionColor } from '../../utils/formatters';
 
 interface AuditTrailProps {
@@ -50,54 +48,57 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
   const [actionFilter, setActionFilter] = useState<string | null>(null);
   const [entityTypeFilter, setEntityTypeFilter] = useState<string | null>(null);
 
-  // Filter logs
-  const filteredLogs = logs.filter((log) => {
-    const matchesSearch =
-      !searchQuery ||
-      log.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      log.entityName.toLowerCase().includes(searchQuery.toLowerCase());
+  // Filter logs (useCallback for optimization)
+  const filteredLogs = useCallback(() => {
+    return logs.filter((log) => {
+      const matchesSearch =
+        !searchQuery ||
+        log.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        log.entityName.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesAction = !actionFilter || log.action === actionFilter;
+      const matchesEntityType = !entityTypeFilter || log.entityType === entityTypeFilter;
+      return matchesSearch && matchesAction && matchesEntityType;
+    });
+  }, [logs, searchQuery, actionFilter, entityTypeFilter]);
 
-    const matchesAction = !actionFilter || log.action === actionFilter;
-    const matchesEntityType = !entityTypeFilter || log.entityType === entityTypeFilter;
-
-    return matchesSearch && matchesAction && matchesEntityType;
-  });
-
-  // Get action icon
-  const getActionIcon = (action: AuditLog['action']) => {
-    const iconMap = {
-      create: <IconPlus size={16} />,
-      update: <IconEdit size={16} />,
-      delete: <IconTrash size={16} />,
-      login: <IconLogin size={16} />,
-      logout: <IconLogout size={16} />,
-      role_change: <IconKey size={16} />,
-    };
-    return iconMap[action] || <IconAlertCircle size={16} />;
+  // Type-safe action label map
+  const actionLabelMap: Record<AuditLog['action'], string> = {
+    create: 'Created',
+    update: 'Updated',
+    delete: 'Deleted',
+    login: 'Logged In',
+    logout: 'Logged Out',
+    role_change: 'Role Changed',
   };
 
-  // Get action label
-  const getActionLabel = (action: AuditLog['action']) => {
-    const labelMap = {
-      create: 'Created',
-      update: 'Updated',
-      delete: 'Deleted',
-      login: 'Logged In',
-      logout: 'Logged Out',
-      role_change: 'Role Changed',
-    };
-    return labelMap[action] || action;
+  const getActionLabel = (action: AuditLog['action']): string => {
+    return actionLabelMap[action] ?? action;
   };
 
-  // Get entity type label
-  const getEntityTypeLabel = (entityType: AuditLog['entityType']) => {
-    const labelMap = {
-      user: 'User',
-      role: 'Role',
-      permission: 'Permission',
-      session: 'Session',
-    };
-    return labelMap[entityType] || entityType;
+  // Type-safe entity type label map
+  const entityTypeLabelMap: Record<AuditLog['entityType'], string> = {
+    user: 'User',
+    role: 'Role',
+    permission: 'Permission',
+    session: 'Session',
+  };
+
+  const getEntityTypeLabel = (entityType: AuditLog['entityType']): string => {
+    return entityTypeLabelMap[entityType] ?? entityType;
+  };
+
+  // Type-safe action icon map
+  const actionIconMap: Record<AuditLog['action'], React.ReactNode> = {
+    create: <IconPlus size={16} />,
+    update: <IconEdit size={16} />,
+    delete: <IconTrash size={16} />,
+    login: <IconLogin size={16} />,
+    logout: <IconLogout size={16} />,
+    role_change: <IconKey size={16} />,
+  };
+
+  const getActionIcon = (action: AuditLog['action']): React.ReactNode => {
+    return actionIconMap[action] ?? <IconAlertCircle size={16} />;
   };
 
   if (logs.length === 0) {
@@ -107,6 +108,8 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
       </Alert>
     );
   }
+
+  const currentFilteredLogs = filteredLogs();
 
   return (
     <Stack gap="md">
@@ -151,20 +154,18 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
           </Group>
         </Paper>
       )}
-
       {/* Results Count */}
       <Text size="sm" c="dimmed">
-        Showing {filteredLogs.length} of {logs.length} audit entries
+        Showing {currentFilteredLogs.length} of {logs.length} audit entries
       </Text>
-
       {/* Timeline */}
       <div style={{ maxHeight, overflowY: 'auto' }}>
-        <Timeline active={filteredLogs.length} bulletSize={32} lineWidth={2}>
-          {filteredLogs.map((log) => (
+        <Timeline active={currentFilteredLogs.length} bulletSize={32} lineWidth={2}>
+          {currentFilteredLogs.map((log) => (
             <Timeline.Item
               key={log.id}
               bullet={
-                <Avatar size={24} radius="xl" color={getAuditActionColor(log.action)}>
+                <Avatar size={24} radius="xl" color={getAuditActionColor(log.action as any)}>
                   {getActionIcon(log.action)}
                 </Avatar>
               }
@@ -173,7 +174,7 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                   <Text fw={600} size="sm">
                     {getActionLabel(log.action)}
                   </Text>
-                  <Badge size="sm" variant="light" color={getAuditActionColor(log.action)}>
+                  <Badge size="sm" variant="light" color={getAuditActionColor(log.action as any)}>
                     {getEntityTypeLabel(log.entityType)}
                   </Badge>
                 </Group>
@@ -197,7 +198,6 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                       </div>
                     </Group>
                   </Group>
-
                   {/* Entity Info */}
                   <div>
                     <Text size="sm">
@@ -206,7 +206,6 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                       <strong>{log.entityName}</strong>
                     </Text>
                   </div>
-
                   {/* Reason */}
                   {log.reason && (
                     <Alert icon={<IconAlertCircle size={16} />} color="blue" variant="light">
@@ -215,7 +214,6 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                       </Text>
                     </Alert>
                   )}
-
                   {/* Changes */}
                   {log.changes && log.changes.length > 0 && (
                     <Accordion variant="contained">
@@ -235,7 +233,7 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                               </Table.Tr>
                             </Table.Thead>
                             <Table.Tbody>
-                              {log.changes.map((change, index) => (
+                              {log.changes.map((change: { field: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; oldValue: any; newValue: any; }, index: Key | null | undefined) => (
                                 <Table.Tr key={index}>
                                   <Table.Td>
                                     <Text size="sm" fw={500}>
@@ -264,7 +262,6 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
                       </Accordion.Item>
                     </Accordion>
                   )}
-
                   {/* IP Address & User Agent */}
                   {(log.ipAddress || log.userAgent) && (
                     <Group gap="xs">
@@ -286,8 +283,7 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({
           ))}
         </Timeline>
       </div>
-
-      {filteredLogs.length === 0 && logs.length > 0 && (
+      {currentFilteredLogs.length === 0 && logs.length > 0 && (
         <Alert icon={<IconAlertCircle size={16} />} color="orange" variant="light">
           No audit logs match the current filters
         </Alert>

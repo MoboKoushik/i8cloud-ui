@@ -49,7 +49,7 @@ export const usePermissions = () => {
   /**
    * Get permission keys user has
    */
-  const getPermissionKeys = useCallback((): string[] => {
+  const getPermissionKeys = useCallback((): (string | undefined)[] => {
     return permissions.map((p) => p.key);
   }, [permissions]);
 

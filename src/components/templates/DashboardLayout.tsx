@@ -28,8 +28,6 @@ import {
   IconSettings,
   IconBell,
   IconSearch,
-  IconSun,
-  IconMoon,
 } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';

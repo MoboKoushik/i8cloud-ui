@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ScrollArea, Stack, Tooltip, UnstyledButton, Box, Text, Transition } from '@mantine/core';
+import { ScrollArea, Stack, Tooltip, UnstyledButton, Box, Text } from '@mantine/core';
 import {
   IconDashboard,
   IconShield,
@@ -25,12 +25,11 @@ import {
   IconClipboardList,
   IconChevronLeft,
   IconChevronRight,
-  IconMenu2,
 } from '@tabler/icons-react';
 import { useAuth } from '../../hooks/useAuth';
 import { usePermissions } from '../../hooks/usePermissions';
 import { getAllModules } from '../../services/modules/moduleService';
-import { Module } from '../../types';
+import type { Module } from '../../types';
 
 // Icon mapping
 const iconMap: Record<string, any> = {

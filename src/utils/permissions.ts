@@ -4,7 +4,12 @@
  * Helper functions for permission checking and validation
  */
 
-import { PermissionMap, Permission } from '../types';
+/**
+ * Permission Utilities
+ *
+ * Helper functions for permission checking and validation
+ */
+import type { PermissionMap, Permission } from '../types';
 
 /**
  * Check if user has a specific permission (O(1) lookup)
@@ -48,7 +53,7 @@ export const getMissingPermissions = (
  */
 export const createPermissionMap = (permissions: Permission[]): PermissionMap => {
   return permissions.reduce((acc, perm) => {
-    acc[perm.key] = true;
+    acc[perm.key as string] = true;
     return acc;
   }, {} as PermissionMap);
 };
@@ -60,10 +65,10 @@ export const groupPermissionsByModule = (
   permissions: Permission[]
 ): Record<string, Permission[]> => {
   return permissions.reduce((acc, perm) => {
-    if (!acc[perm.module]) {
-      acc[perm.module] = [];
+    if (!acc[perm.module as string]) {
+      acc[perm.module as string] = [];
     }
-    acc[perm.module].push(perm);
+    acc[perm.module as string].push(perm);
     return acc;
   }, {} as Record<string, Permission[]>);
 };
@@ -152,7 +157,7 @@ export const parsePermissionKey = (
 /**
  * Get all "view" permissions (for quick "View Only" role creation)
  */
-export const getViewOnlyPermissions = (permissions: Permission[]): string[] => {
+export const getViewOnlyPermissions = (permissions: Permission[]): (string | undefined)[] => {
   return permissions.filter((p) => p.action === 'view').map((p) => p.key);
 };
 

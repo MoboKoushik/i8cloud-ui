@@ -4,7 +4,12 @@
  * Roles are fully dynamic and can be created/modified by SUPER ADMIN
  */
 
-import { Permission } from './permission.types';
+/**
+ * Role Types for Dynamic RBAC System
+ *
+ * Roles are fully dynamic and can be created/modified by SUPER ADMIN
+ */
+import type { Permission } from './permission.types';
 
 export interface Role {
   id: string;

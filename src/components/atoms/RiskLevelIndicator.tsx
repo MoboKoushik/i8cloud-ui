@@ -6,16 +6,16 @@
 
 import { Badge, Tooltip } from '@mantine/core';
 import { IconAlertTriangle, IconShield, IconInfoCircle } from '@tabler/icons-react';
-import { RiskLevel } from '../../types';
+
 
 interface RiskLevelIndicatorProps {
-  level: RiskLevel;
+  level: any;
   showLabel?: boolean;
   size?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
 const riskLevelConfig: Record<
-  RiskLevel,
+  any,
   {
     color: string;
     icon: React.ReactNode;

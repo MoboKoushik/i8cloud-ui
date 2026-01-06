@@ -4,11 +4,16 @@
  * Validates session on every action and handles auto-logout
  */
 
-import { Middleware } from '@reduxjs/toolkit';
+/**
+ * Auth Middleware
+ *
+ * Validates session on every action and handles auto-logout
+ */
+import type { Middleware } from '@reduxjs/toolkit';
 import { sessionExpired } from '../slices/authSlice';
 import { clearPermissions } from '../slices/permissionsSlice';
 
-export const authMiddleware: Middleware = (store) => (next) => (action) => {
+export const authMiddleware: Middleware = (store) => (next) => (action: any) => {
   // Get current state before action
   const stateBefore = store.getState();
   const { auth } = stateBefore;

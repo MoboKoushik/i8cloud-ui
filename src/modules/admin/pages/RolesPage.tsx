@@ -26,7 +26,7 @@ import {
 } from '@mantine/core';
 import { IconPlus, IconEdit, IconTrash, IconSearch, IconShieldCheck } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
-import { Role, Permission } from '@/types/permissions';
+import type { Role, Permission } from '@/types/permissions';
 
 // Mock permissions data
 const mockPermissions: Permission[] = [

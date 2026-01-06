@@ -19,7 +19,6 @@ import { useForm } from '@mantine/form';
 import { IconArrowLeft, IconDeviceFloppy } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
-  getRoles,
   getRoleById,
   getPermissions,
   getPermissionsByRoleId,
@@ -35,21 +34,21 @@ interface Permission {
   action: string;
 }
 
-interface RolePermissionMap {
-  uuid: string;
-  role_id: string;
-  permission_id: string;
-}
+// interface RolePermissionMap {
+//   uuid: string;
+//   role_id: string;
+//   permission_id: string;
+// }
 
-interface Role {
-  uuid: string;
-  name: string;
-  description: string;
-  is_admin: number;
-  is_active: number;
-  created_at: string;
-  updated_at: string;
-}
+// interface Role {
+//   uuid: string;
+//   name: string;
+//   description: string;
+//   is_admin: number;
+//   is_active: number;
+//   created_at: string;
+//   updated_at: string;
+// }
 
 const RoleFormPage = () => {
   const navigate = useNavigate();

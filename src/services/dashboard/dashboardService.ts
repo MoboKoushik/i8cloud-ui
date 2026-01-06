@@ -4,7 +4,12 @@
  * Provides dashboard KPI and summary data based on user role and permissions
  */
 
-import { ServiceResponse } from '../../types';
+/**
+ * Dashboard Service
+ *
+ * Provides dashboard KPI and summary data based on user role and permissions
+ */
+import type { ServiceResponse } from '../../types';
 
 /**
  * Simulate API latency

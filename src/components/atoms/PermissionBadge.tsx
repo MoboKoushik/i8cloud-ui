@@ -4,8 +4,8 @@
  * Displays a permission with optional risk level indicator
  */
 
-import { Group, Badge, Text } from '@mantine/core';
-import { Permission } from '../../types';
+import { Group, Badge } from '@mantine/core';
+import type { Permission } from '../../types';
 import { RiskLevelIndicator } from './RiskLevelIndicator';
 
 interface PermissionBadgeProps {

@@ -35,7 +35,7 @@ const SecurityPage = () => {
   const [selectedSecurityGroupType, setSelectedSecurityGroupType] = useState<string>('All');
   const [selectedCompletedBy, setSelectedCompletedBy] = useState<string>('All');
 
-  const { summary, securityPoliciesChanged, segregationOfDuties, securityGroupAssignmentChanges, securityGroupCreated, securityGroupAssignmentChanges: assignmentChanges } = securityData;
+  const { summary, securityPoliciesChanged, segregationOfDuties } = securityData;
 
   return (
     <Box p="lg">
@@ -365,7 +365,7 @@ const SecurityPage = () => {
                       ROLE BASED GROUPS
                     </Text>
                     <Text size="2.5rem" fw={700} c="#212529">
-                      {securityGroupAssignmentChanges.roleBasedGroups}
+                      {/* {securityGroupAssignmentChanges?.roleBasedGroups} */}
                     </Text>
                   </Stack>
                 </Grid.Col>
@@ -376,7 +376,7 @@ const SecurityPage = () => {
                       USER BASED GROUPS
                     </Text>
                     <Text size="2.5rem" fw={700} c="#212529">
-                      {securityGroupAssignmentChanges.userBasedGroups}
+                      {/* {securityGroupAssignmentChanges.userBasedGroups} */}
                     </Text>
                   </Stack>
                 </Grid.Col>

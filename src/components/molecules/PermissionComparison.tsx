@@ -7,7 +7,7 @@
 
 import { Stack, Group, Text, Badge, Paper, SimpleGrid, Alert } from '@mantine/core';
 import { IconPlus, IconMinus, IconEqual, IconAlertCircle } from '@tabler/icons-react';
-import { Permission } from '../../types';
+import type { Permission } from '../../types';
 import { PermissionBadge } from '../atoms/PermissionBadge';
 
 interface PermissionComparisonProps {
@@ -39,10 +39,10 @@ export const PermissionComparison: React.FC<PermissionComparisonProps> = ({
   // Group permissions by module for better organization
   const groupByModule = (permissions: Permission[]) => {
     return permissions.reduce((acc, permission) => {
-      if (!acc[permission.module]) {
-        acc[permission.module] = [];
+      if (!acc[permission.module as string]) {
+        acc[permission.module as string] = [];
       }
-      acc[permission.module].push(permission);
+      acc[permission.module as string].push(permission);
       return acc;
     }, {} as Record<string, Permission[]>);
   };
@@ -138,9 +138,9 @@ export const PermissionComparison: React.FC<PermissionComparisonProps> = ({
                     {moduleKey} ({modulePermissions.length})
                   </Badge>
                   <SimpleGrid cols={2} spacing="xs">
-                    {modulePermissions.map((permission) => (
+                    {modulePermissions.map((permission: any) => (
                       <PermissionBadge
-                        key={permission.id}
+                        key={permission.id as string}
                         permission={permission}
                         showRiskLevel
                       />
@@ -182,7 +182,7 @@ export const PermissionComparison: React.FC<PermissionComparisonProps> = ({
                     {moduleKey} ({modulePermissions.length})
                   </Badge>
                   <SimpleGrid cols={2} spacing="xs">
-                    {modulePermissions.map((permission) => (
+                    {modulePermissions.map((permission: any) => (
                       <PermissionBadge
                         key={permission.id}
                         permission={permission}
@@ -218,7 +218,7 @@ export const PermissionComparison: React.FC<PermissionComparisonProps> = ({
                     {moduleKey} ({modulePermissions.length})
                   </Badge>
                   <SimpleGrid cols={2} spacing="xs">
-                    {modulePermissions.map((permission) => (
+                    {modulePermissions.map((permission: any) => (
                       <PermissionBadge
                         key={permission.id}
                         permission={permission}

@@ -22,12 +22,7 @@ import {
 } from '@mantine/core';
 import {
   IconUsers,
-  IconShieldCheck,
-  IconAlertCircle,
-  IconClock,
-  IconLock,
   IconUserCheck,
-  IconChartPie,
 } from '@tabler/icons-react';
 import accessAuditData from '../../../data/access-audit.json';
 

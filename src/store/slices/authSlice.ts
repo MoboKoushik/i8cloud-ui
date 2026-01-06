@@ -2,8 +2,8 @@
  * Auth Slice - Authentication & Session State
  */
 
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AuthState, AuthUser } from '../../types';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { AuthState, AuthUser } from '../../types';
 
 const initialState: AuthState = {
   user: null,
@@ -63,7 +63,7 @@ const authSlice = createSlice({
     updateActivity: (state) => {
       state.lastActivity = new Date().toISOString();
     },
-    sessionExpired: (state) => {
+    sessionExpired: () => {
       return {
         ...initialState,
         error: 'Session expired. Please login again.',

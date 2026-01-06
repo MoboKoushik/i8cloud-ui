@@ -5,7 +5,13 @@
  * Tracks who did what, when, and why
  */
 
-import { AuditLog, ServiceResponse } from '../../types';
+/**
+ * Audit Service
+ *
+ * Handles audit logging for all RBAC operations
+ * Tracks who did what, when, and why
+ */
+import type { AuditLog, ServiceResponse } from '../../types';
 
 /**
  * Simulates API latency
@@ -48,6 +54,10 @@ export const logRoleCreate = async (data: {
           newValue: data.permissions,
         },
       ],
+      reason: undefined,
+      userName: '',
+      resource: '',
+      details: {}
     };
 
     // In real API, this would save to database
@@ -92,6 +102,10 @@ export const logRoleUpdate = async (data: {
       entityId: data.roleId,
       entityName: data.roleName,
       changes: data.changes,
+      reason: undefined,
+      userName: '',
+      resource: '',
+      details: {}
     };
 
     console.log('[AUDIT] Role updated:', auditLog);

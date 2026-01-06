@@ -2,7 +2,10 @@
  * Custom Color Palette
  */
 
-import { MantineColorsTuple } from '@mantine/core';
+/**
+ * Custom Color Palette
+ */
+import type { MantineColorsTuple } from '@mantine/core';
 
 // Primary Blue (from screenshots)
 export const primaryBlue: MantineColorsTuple = [

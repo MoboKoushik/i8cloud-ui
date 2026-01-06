@@ -50,13 +50,19 @@ export interface Notification {
 }
 
 export interface AuditLog {
+  reason?: any;
+  changes?: any;
+  entityType: string;
+  entityName: any;
+  username?: any;
   id: string;
   timestamp: string;
   userId: string;
-  userName: string;
+  userName?: string;
   action: string;
-  resource: string;
-  details: Record<string, unknown>;
+  resource?: string;
+  details?: Record<string, unknown>;
   ipAddress?: string;
   userAgent?: string;
+  entityId?: string;
 }

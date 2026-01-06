@@ -5,8 +5,8 @@
  */
 
 import permissionsData from '../../data/permissions.json';
-import modulesData from '../../data/modules.json';
-import { Permission, ServiceResponse, PermissionMap } from '../../types';
+// import modulesData from '../../data/modules.json';
+import type { Permission, ServiceResponse, PermissionMap } from '../../types';
 import { generatePermissionSubject, generatePermissionUUID } from '../../utils/formatters';
 
 /**
@@ -23,7 +23,7 @@ export const getAllPermissions = async (): Promise<ServiceResponse<Permission[]>
   try {
     return {
       success: true,
-      data: permissionsData.permissions as Permission[],
+      data: permissionsData as Permission[],
     };
   } catch (error) {
     return {
@@ -46,8 +46,8 @@ export const getPermissionsByModule = async (
   await simulateApiLatency();
 
   try {
-    const modulePermissions = permissionsData.permissions.filter(
-      (p) => p.module === moduleKey
+    const modulePermissions = permissionsData.filter(
+      (p) => p.subject === moduleKey
     ) as Permission[];
 
     return {
@@ -75,12 +75,12 @@ export const getGroupedPermissions = async (): Promise<
   await simulateApiLatency();
 
   try {
-    const grouped = permissionsData.permissions.reduce((acc, permission) => {
+    const grouped = permissionsData.reduce((acc, permission) => {
       const p = permission as Permission;
-      if (!acc[p.module]) {
-        acc[p.module] = [];
+      if (!acc[p.subject]) {
+        acc[p.subject] = [];
       }
-      acc[p.module].push(p);
+      acc[p.subject].push(p);
       return acc;
     }, {} as Record<string, Permission[]>);
 
@@ -109,8 +109,8 @@ export const getPermissionsByCategory = async (
   await simulateApiLatency();
 
   try {
-    const categoryPermissions = permissionsData.permissions.filter(
-      (p) => p.category === category
+    const categoryPermissions = permissionsData.filter(
+      (p) => p.subject === category
     ) as Permission[];
 
     return {
@@ -138,7 +138,7 @@ export const getPermissionByKey = async (
   await simulateApiLatency();
 
   try {
-    const permission = (permissionsData.permissions.find((p) => p.key === key) as Permission) || null;
+    const permission = (permissionsData.find((p) => p.uuid === key) as Permission) || null;
 
     return {
       success: true,
@@ -165,7 +165,7 @@ export const validatePermissionKeys = async (
   await simulateApiLatency();
 
   try {
-    const validKeys = new Set(permissionsData.permissions.map((p) => p.key));
+    const validKeys = new Set(permissionsData.map((p: any) => p.uuid));
     const invalidKeys = keys.filter((key) => !validKeys.has(key));
 
     return {
@@ -192,7 +192,7 @@ export const validatePermissionKeys = async (
  */
 export const createPermissionMap = (permissions: Permission[]): PermissionMap => {
   return permissions.reduce((acc, perm) => {
-    acc[perm.key] = true;
+    acc[perm.uuid] = true;
     return acc;
   }, {} as PermissionMap);
 };
@@ -206,8 +206,8 @@ export const getPermissionsForRole = async (
   await simulateApiLatency();
 
   try {
-    const rolePermissions = permissionsData.permissions.filter((p) =>
-      permissionKeys.includes(p.key)
+    const rolePermissions = permissionsData.filter((p) =>
+      permissionKeys.includes(p.uuid)
     ) as Permission[];
 
     return {
@@ -236,8 +236,8 @@ export const searchPermissions = async (
 
   try {
     const lowercaseQuery = query.toLowerCase();
-    const results = permissionsData.permissions.filter(
-      (p) =>
+    const results = permissionsData.filter(
+      (p: any) =>
         p.actionDisplayName.toLowerCase().includes(lowercaseQuery) ||
         p.moduleDisplayName.toLowerCase().includes(lowercaseQuery) ||
         p.description.toLowerCase().includes(lowercaseQuery) ||
@@ -274,7 +274,7 @@ export const createPermissionsForModule = async (
     const subject = generatePermissionSubject(moduleName);
 
     // Check if module already exists (case-insensitive)
-    const permissions = Array.isArray(permissionsData) ? permissionsData : permissionsData.permissions || [];
+    const permissions = Array.isArray(permissionsData) ? permissionsData : permissionsData || [];
     const existingModule = permissions.find(
       (p: any) => p.subject?.toLowerCase() === subject.toLowerCase()
     );

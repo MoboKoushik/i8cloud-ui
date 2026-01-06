@@ -19,7 +19,7 @@ import {
   Alert,
 } from '@mantine/core';
 import { IconSearch, IconAlertCircle } from '@tabler/icons-react';
-import { Permission, Module } from '../../types';
+import type { Permission, Module } from '../../types';
 import { RiskLevelIndicator } from '../atoms/RiskLevelIndicator';
 
 interface PermissionSelectorProps {
@@ -44,15 +44,15 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
     const groups: Record<string, Permission[]> = {};
 
     permissions.forEach((permission) => {
-      if (!groups[permission.module]) {
-        groups[permission.module] = [];
+      if (!groups[permission.module as string]) {
+        groups[permission.module as string] = [];
       }
-      groups[permission.module].push(permission);
+      groups[permission.module as string].push(permission);
     });
 
     // Sort permissions within each module by action
-    Object.keys(groups).forEach((moduleKey) => {
-      groups[moduleKey].sort((a, b) => a.actionDisplayName.localeCompare(b.actionDisplayName));
+    Object.keys(groups).forEach((moduleKey: any) => {
+      groups[moduleKey].sort((a: any, b: any) => a.actionDisplayName.localeCompare(b.actionDisplayName));
     });
 
     return groups;
@@ -85,7 +85,7 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
 
     Object.entries(groupedPermissions).forEach(([moduleKey, modulePermissions]) => {
       const matchingPermissions = modulePermissions.filter(
-        (permission) =>
+        (permission: any) =>
           permission.key.toLowerCase().includes(searchQuery.toLowerCase()) ||
           permission.actionDisplayName.toLowerCase().includes(searchQuery.toLowerCase()) ||
           permission.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -116,7 +116,7 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
     if (checked) {
       // Add all module permissions
       const newSelected = [...selectedPermissionKeys];
-      modulePermissionKeys.forEach((key) => {
+      modulePermissionKeys.forEach((key: any) => {
         if (!newSelected.includes(key)) {
           newSelected.push(key);
         }
@@ -131,13 +131,13 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
   // Check if all permissions in a module are selected
   const isModuleFullySelected = (moduleKey: string): boolean => {
     const modulePermissions = groupedPermissions[moduleKey] || [];
-    return modulePermissions.every((p) => selectedPermissionKeys.includes(p.key));
+    return modulePermissions.every((p: any) => selectedPermissionKeys.includes(p.key));
   };
 
   // Check if some permissions in a module are selected
   const isModulePartiallySelected = (moduleKey: string): boolean => {
     const modulePermissions = groupedPermissions[moduleKey] || [];
-    const selectedCount = modulePermissions.filter((p) =>
+    const selectedCount = modulePermissions.filter((p: any) =>
       selectedPermissionKeys.includes(p.key)
     ).length;
     return selectedCount > 0 && selectedCount < modulePermissions.length;
@@ -145,7 +145,7 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
 
   // Quick actions
   const handleSelectAll = () => {
-    onChange(permissions.map((p) => p.key));
+    onChange(permissions.map((p: any) => p.key));
   };
 
   const handleDeselectAll = () => {
@@ -153,15 +153,15 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
   };
 
   const handleSelectViewOnly = () => {
-    const viewPermissions = permissions.filter((p) => p.action === 'view').map((p) => p.key);
+    const viewPermissions: any = permissions.filter((p) => p.action === 'view').map((p) => p.key);
     onChange(viewPermissions);
   };
 
   // Get module name
-  const getModuleName = (moduleKey: string) => {
-    const module = modules.find((m) => m.key === moduleKey);
-    return module?.name || moduleKey;
-  };
+  // const getModuleName = (moduleKey: string) => {
+  //   const module = modules.find((m) => m.key === moduleKey);
+  //   return module?.name || moduleKey;
+  // };
 
   return (
     <Stack gap="md">
@@ -219,7 +219,7 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
                 const modulePermissions = filteredGroupedPermissions[module.key] || [];
                 const isFullySelected = isModuleFullySelected(module.key);
                 const isPartiallySelected = isModulePartiallySelected(module.key);
-                const selectedCount = modulePermissions.filter((p) =>
+                const selectedCount = modulePermissions.filter((p: any) =>
                   selectedPermissionKeys.includes(p.key)
                 ).length;
 
@@ -251,7 +251,7 @@ export const PermissionSelector: React.FC<PermissionSelectorProps> = ({
 
                     <Accordion.Panel>
                       <Stack gap="xs">
-                        {modulePermissions.map((permission) => (
+                        {modulePermissions.map((permission: any) => (
                           <Paper key={permission.id} p="sm" withBorder>
                             <Group justify="space-between" wrap="nowrap">
                               <Checkbox

@@ -21,7 +21,7 @@ import {
 } from '@mantine/core';
 import { IconSearch, IconFilter, IconInfoCircle } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
-import { Permission, Module, RiskLevel } from '../../types';
+import { type Permission, type Module } from '../../types';
 import { RiskLevelIndicator } from '../atoms/RiskLevelIndicator';
 import { EmptyState } from '../atoms/EmptyState';
 
@@ -39,7 +39,7 @@ export const PermissionGrid: React.FC<PermissionGridProps> = ({ permissions, mod
 
   // Filter permissions
   const filteredPermissions = useMemo(() => {
-    return permissions.filter((permission) => {
+    return permissions.filter((permission: any) => {
       // Search filter
       const matchesSearch =
         !searchQuery ||
@@ -62,10 +62,10 @@ export const PermissionGrid: React.FC<PermissionGridProps> = ({ permissions, mod
     const groups: Record<string, Permission[]> = {};
 
     filteredPermissions.forEach((permission) => {
-      if (!groups[permission.module]) {
-        groups[permission.module] = [];
+      if (!groups[permission.module as string]) {
+        groups[permission.module as string] = [];
       }
-      groups[permission.module].push(permission);
+      groups[permission.module as string].push(permission);
     });
 
     return groups;
@@ -102,7 +102,7 @@ export const PermissionGrid: React.FC<PermissionGridProps> = ({ permissions, mod
   }, [modules]);
 
   // Risk filter options
-  const riskOptions: { value: RiskLevel; label: string }[] = [
+  const riskOptions: { value: any; label: string }[] = [
     { value: 'low', label: 'Low Risk' },
     { value: 'medium', label: 'Medium Risk' },
     { value: 'high', label: 'High Risk' },
@@ -192,7 +192,7 @@ export const PermissionGrid: React.FC<PermissionGridProps> = ({ permissions, mod
                 </Accordion.Control>
                 <Accordion.Panel>
                   <Grid gutter="md">
-                    {modulePermissions.map((permission) => (
+                    {modulePermissions.map((permission: any) => (
                       <Grid.Col key={permission.id} span={{ base: 12, sm: 6, md: 4 }}>
                         <Card
                           withBorder
@@ -281,7 +281,7 @@ export const PermissionGrid: React.FC<PermissionGridProps> = ({ permissions, mod
               <Text size="sm" c="dimmed" mb={4}>
                 Module
               </Text>
-              <Text size="sm">{getModuleName(selectedPermission.module)}</Text>
+              <Text size="sm">{getModuleName(selectedPermission.module as string)}</Text>
             </div>
 
             <div>

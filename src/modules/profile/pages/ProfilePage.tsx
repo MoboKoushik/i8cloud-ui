@@ -24,8 +24,10 @@ import {
   IconShield,
   IconCalendar,
   IconEdit,
+  type ReactNode,
 } from '@tabler/icons-react';
 import { useAuth } from '../../../hooks/useAuth';
+import type { ReactElement, JSXElementConstructor, ReactPortal, Key } from 'react';
 
 const ProfilePage = () => {
   const { user } = useAuth();
@@ -38,7 +40,7 @@ const ProfilePage = () => {
     if (!user?.name) return '?';
     return user.name
       .split(' ')
-      .map((n) => n[0])
+      .map((n: any) => n[0])
       .join('')
       .substring(0, 2)
       .toUpperCase();
@@ -192,7 +194,7 @@ const ProfilePage = () => {
                 Permissions ({user.role.permissions.length})
               </Title>
               <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="xs">
-                {user.role.permissions.map((perm, index) => (
+                {user.role.permissions.map((perm: { subject: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; action: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: Key | null | undefined) => (
                   <Badge
                     key={index}
                     variant="dot"

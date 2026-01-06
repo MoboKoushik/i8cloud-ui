@@ -38,7 +38,6 @@ import {
   IconAlertCircle,
   IconCheck,
   IconInfoCircle,
-  IconX,
 } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import { useAuth } from '../../hooks/useAuth';

@@ -2,7 +2,10 @@
  * Authentication & Session Types
  */
 
-import { AuthUser } from './user.types';
+/**
+ * Authentication & Session Types
+ */
+import type { AuthUser } from './user.types';
 
 export interface LoginCredentials {
   username: string;

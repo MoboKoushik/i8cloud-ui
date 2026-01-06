@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Redux Store Configuration
  */
@@ -13,32 +14,34 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // localStorage
+import storage from 'redux-persist/lib/storage';
 
 import authReducer from './slices/authSlice';
 import permissionsReducer from './slices/permissionsSlice';
 import uiReducer from './slices/uiSlice';
 
-// Persist config for auth slice
+// Persist configs (unchanged)
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['user', 'token', 'role', 'isAuthenticated', 'expiresAt'], // Only persist these fields
+  whitelist: ['user', 'token', 'role', 'isAuthenticated', 'expiresAt'],
 };
 
-// Persist config for UI preferences
 const uiPersistConfig = {
   key: 'ui',
   storage,
-  whitelist: ['sidebarCollapsed'], // Only persist sidebar state
+  whitelist: ['sidebarCollapsed'],
+};
+
+// Explicitly typed root reducer
+const rootReducer = {
+  auth: persistReducer<any>(authPersistConfig, authReducer),
+  permissions: permissionsReducer as typeof permissionsReducer, // preserves original type
+  ui: persistReducer<any>(uiPersistConfig, uiReducer),
 };
 
 export const store = configureStore({
-  reducer: {
-    auth: persistReducer(authPersistConfig, authReducer),
-    permissions: permissionsReducer, // DO NOT persist permissions - fetch fresh on each session
-    ui: persistReducer(uiPersistConfig, uiReducer),
-  },
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

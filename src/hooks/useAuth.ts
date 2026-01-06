@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * useAuth Hook
  *
@@ -16,7 +17,7 @@ import {
 import { setPermissions, clearPermissions } from '../store/slices/permissionsSlice';
 import { login as loginService, logout as logoutService } from '../services/auth/authService';
 import { logLogin, logLogout } from '../services/audit/auditService';
-import { LoginCredentials } from '../types';
+import type { LoginCredentials } from '../types';
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();
@@ -37,13 +38,12 @@ export const useAuth = () => {
           return { success: false, error: response.error?.message || 'Login failed' };
         }
 
-        const { user, role, permissions, token, loginTime, expiresAt } = response.data;
+        const { user, permissions, token, loginTime, expiresAt }: any = response.data;
 
         // Update auth state
         dispatch(
           loginSuccess({
             user,
-            role,
             token,
             loginTime,
             expiresAt,

@@ -1,9 +1,13 @@
 import { useAppSelector } from "@/store/hooks";
 import { AbilityContext } from "@/utils/Can";
-import { defineAbility } from "@casl/ability";
+import {
+  defineAbility,
+  type MongoAbility,
+} from "@casl/ability";
 import { useEffect } from "react";
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
-import { RootState } from "@/store/store";
+import type { RootState } from "@/store/store";
+import type { Actions } from "@/config/ability"; // Adjust path if needed
 
 const AuthenticatedRoutes = () => {
   const authState = useAppSelector((state: RootState) => state.auth);
@@ -19,14 +23,15 @@ const AuthenticatedRoutes = () => {
     return <Navigate to="/auth/login" />;
   }
 
-  const ability = defineAbility((can) => {
+
+  const ability = defineAbility<MongoAbility<[Actions, string]>>((can) => {
     authState?.user?.role?.permissions.forEach((permission) => {
-      can(permission.action, permission.subject);
+      can(permission.action as Actions, permission.subject);
     });
   });
 
   return (
-    <AbilityContext.Provider value={ability}>
+    <AbilityContext.Provider value={ability || null}>
       <Outlet />
     </AbilityContext.Provider>
   );

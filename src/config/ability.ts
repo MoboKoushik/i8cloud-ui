@@ -5,8 +5,8 @@
  * Works with new permission format: { uuid, subject, action }
  */
 
-import { Ability, AbilityBuilder, AbilityClass } from '@casl/ability';
-import { Permission } from '../types';
+import { Ability, AbilityBuilder, type AbilityClass } from '@casl/ability';
+import type { Permission } from '../types';
 
 /**
  * Define actions for CASL

@@ -21,7 +21,7 @@ import {
 } from '@mantine/core';
 import { IconAlertCircle, IconKey, IconInfoCircle } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
-import { User, Role, Permission } from '../../types';
+import type { User, Role, Permission } from '../../types';
 import { RoleBadge } from '../atoms/RoleBadge';
 import { PermissionComparison } from '../molecules/PermissionComparison';
 import { changeUserRole } from '../../services/users/userService';
@@ -64,11 +64,11 @@ export const ChangeRoleModal: React.FC<ChangeRoleModalProps> = ({
   const selectedRole = availableRoles.find((r) => r.id === selectedRoleId);
 
   // Get permissions for current and new roles
-  const currentPermissions = allPermissions.filter((p) =>
+  const currentPermissions = allPermissions.filter((p: any) =>
     currentRole?.permissions.includes(p.key)
   );
   const newPermissions = selectedRole
-    ? allPermissions.filter((p) => selectedRole.permissions.includes(p.key))
+    ? allPermissions.filter((p: any) => selectedRole.permissions.includes(p.key))
     : [];
 
   const isSelfModification = user?.id === currentUserId;
@@ -79,7 +79,7 @@ export const ChangeRoleModal: React.FC<ChangeRoleModalProps> = ({
     try {
       setLoading(true);
 
-      const response = await changeUserRole(user.id, selectedRoleId, currentUserId, reason || undefined);
+      const response = await changeUserRole(user.id, selectedRoleId, currentUserId);
 
       if (!response.success) {
         throw new Error(response.error?.message || 'Failed to change user role');

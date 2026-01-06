@@ -2,14 +2,10 @@
  * User Types
  */
 
-export enum AccessTypesEnum {
-  BACKEND = "backend",
-  STORE = "store",
-}
 
 export interface AuthUser {
   uuid: string;
-  type: AccessTypesEnum;
+  type: string;
   name: string;
   email: string;
   role: {
